@@ -6,7 +6,7 @@ load_dotenv()
 
 
 def get_bot() -> Bot | None:
-    bot_token = os.getenv("BOT_TOKEN")
+    bot_token = os.getenv("TG_TOKEN")
     if bot_token:
         bot = Bot(token=bot_token)
         return bot

@@ -1,1 +1,1 @@
-web: PYTHONPATH=src/crc-bot python src/crc-bot/main.py
+worker: PYTHONPATH=src/crc-bot python src/crc-bot/main.py
