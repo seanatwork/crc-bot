@@ -1,1 +1,1 @@
-web: python -m src.crc-bot.main
+web: PYTHONPATH=src/crc-bot python src/crc-bot/main.py
