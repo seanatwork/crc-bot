@@ -1,5 +1,7 @@
+import os
 import aiosqlite
 
+os.makedirs("data", exist_ok=True)
 DB: str = "data/db.sqlite"
 
 
