@@ -34,7 +34,7 @@ async def create_table() -> None:
 async def add_user(id: int) -> None:
     # default user configuration
     curr_from: str = "USD 🇺🇸"
-    curr_to: str = "EUR 🇪🇺"
+    curr_to: str = "GBP 🇬🇧"
     round: bool = True
     user_data: str = ""
     # rows to be added to the database
