@@ -11,10 +11,7 @@ from commands import start
 from commands import curr_commands
 from commands import help
 from commands import about
-from handlers import set_currencies, set_currencies
-from handlers import rate, rate
-from handlers import round, round
-from handlers import converter, converter
+from handlers import set_currencies, rate, round, converter
 
 
 dp = Dispatcher()
@@ -53,8 +50,9 @@ async def main() -> None:
         await create_table()
         # getting exchange rates
         await get_rates()
-        loop = get_event_loop()
-        loop.create_task(scheduler())
+        # Create background task properly
+        import asyncio
+        asyncio.create_task(scheduler())
         await bot.delete_webhook(drop_pending_updates=True)
         await dp.start_polling(bot)
 

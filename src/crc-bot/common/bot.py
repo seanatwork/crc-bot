@@ -2,8 +2,7 @@ from aiogram import Bot
 from dotenv import load_dotenv
 import os
 
-env_path =  os.path.join(os.getcwd(), ".env")
-load_dotenv(env_path)
+load_dotenv()
 
 
 def get_bot() -> Bot | None:
