@@ -11,7 +11,7 @@ from commands import start
 from commands import curr_commands
 from commands import help
 from commands import about
-from handlers import set_currencies, rate, round, converter
+from handlers import set_currencies, rate, round, converter, inline
 
 
 dp = Dispatcher()
@@ -25,6 +25,7 @@ dp.include_router(set_currencies.router)
 dp.include_router(rate.router)
 dp.include_router(round.router)
 dp.include_router(converter.router)
+dp.include_router(inline.router)
 
 
 # exchange rates update
